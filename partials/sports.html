@@ -1,1 +1,7 @@
-<h1>Now for Sports Stuff</h1>
+<h1>Entertainment Search</h1>
+
+<div ng-repeat="x in feed.tweets">
+	<h3>{{ x.text }}</h3>
+	<img src="{{ x.author.avatar }}" alt="">
+	<em>{{ x.author.fullName }}</em>
+</div>
