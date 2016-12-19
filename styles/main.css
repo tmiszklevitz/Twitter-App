@@ -16,17 +16,20 @@ nav {
 nav ul {
 	float: right;
 	margin: 0px;
-	margin-right: 20px;
+	margin-top: 15px;
+	/*margin-right: 20px;*/
 	padding-bottom: 10px;
 }
 nav li a {
 	display: block;
 	color: white;
 	text-decoration: none;
-	width: 125px;
+	/*width: 125px;*/
 	height: 75px;
-	text-align: right;
+	text-align: center;
 	line-height: 75px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 nav li {
 	display: inline-block;
@@ -36,7 +39,7 @@ nav li {
 }
 #logo {
 	height: 75px;
-	width: 100%;
+	margin-left: 20px;
 }
 #container{
 	background-color: black;
