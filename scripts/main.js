@@ -1,6 +1,6 @@
 //my scripts
-
-var app = angular.module("twitterApp", ["ngRoute"]);
+//<a class="twitter-timeline" href="https://twitter.com/search?q=celebrity" data-widget-id="809566881795424256">Tweets about celebrity</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+var app = angular.module("twitterApp", ["ngRoute","ngTweets"]);
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -8,9 +8,30 @@ app.config(function($routeProvider) {
         templateUrl : "partials/main.html"
     })
     .when("/celebritySearch", {
-        templateUrl : "partials/celeb.html"
+        templateUrl : "partials/celeb.html",
+        controller : "celebCtrl"
     })
     .when("/sportsSearch", {
-        templateUrl : "partials/sports.html"
+        templateUrl : "partials/sports.html",
+        controller : "sportsCtrl"
     })
+});
+
+app.controller("celebCtrl", function ($scope, $http, tweets){
+    //Load the JSON Data with an SHTTP request
+    tweets.get({
+        widgetId: '809566881795424256'
+    }).success(function(data){
+        $scope.feed = data;
+    });
+    // .then(function(response) {
+    //     //First function handles success
+    //     $scope.recipeItems = response.data.hits;
+    // // }, function(response) {
+    // //     //Second function handles error
+    // //     $scope.content = "Something went wrong";,,
+    // });
+});
+app.controller("sportsCtrl", function ($scope, $http) {
+    //JSON data
 });
