@@ -4,26 +4,29 @@ body, html {
 	padding: 0px;
 	margin: 0px;
 	font-family: helvetica, sans-serif;
+	background-color: black;
+	color: white;
 }
 nav {
 	width: 100%;
-	background-color: #444;
-	height: 65px;
+	background-color: black;
+	height: 120px;
+	margin-top: 10px;
 }
 nav ul {
 	float: right;
 	margin: 0px;
-	padding: 0px;
+	margin-right: 20px;
+	padding-bottom: 10px;
 }
 nav li a {
 	display: block;
 	color: white;
 	text-decoration: none;
-	text-transform: uppercase;
-	width: 100px;
-	height: 65px;
-	text-align: center;
-	line-height: 65px;
+	width: 125px;
+	height: 75px;
+	text-align: right;
+	line-height: 75px;
 }
 nav li {
 	display: inline-block;
@@ -32,12 +35,13 @@ nav li {
 	padding: 0px;
 }
 #logo {
-	margin-left: 20px;
-	line-height: 65px;
-	font-size: 40px;
-	float: left;
-	color: white;
+	height: 75px;
+	width: 100%;
 }
-#logo span {
-	color: #1DA0F2;
+#container{
+	background-color: black;
+	padding-left: 20px;
+}
+h2, h3{
+	color: #07DD34;
 }
